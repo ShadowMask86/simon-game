@@ -1,6 +1,6 @@
 // Array of colours
 
-let buttonColours = ["red", "blue", "green", "yellow"];
+const buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
 let userClickedPattern = [];
 let level = 0;
@@ -11,7 +11,7 @@ let gameStarted = false;
 function nextSequence() {
 
     // generate random number
-    let randomNumber = Math.floor(Math.random() * 4);
+    let randomNumber = Math.floor(Math.random() * buttonColours.length);
 
     // choose random color
     let randomChosenColour = buttonColours[randomNumber];
@@ -60,10 +60,9 @@ function pressAnimation(currentColour){
     },100);
 }
 
-function checkAnswer(currentLevel){
-    if(gamePattern[currentLevel] == userClickedPattern[currentLevel]){
-        console.log("success");
-        if(gamePattern.length == userClickedPattern.length){
+function checkAnswer(currentIndex){
+    if(gamePattern[currentIndex] === userClickedPattern[currentIndex]){
+        if(gamePattern.length === userClickedPattern.length){
             console.log("sequence is complete");
             setTimeout(() =>{
                 nextSequence();
@@ -72,7 +71,6 @@ function checkAnswer(currentLevel){
         }
     }
     else{
-        console.log("Wrong");
         playSound("wrong");
         $("body").addClass("game-over");
         setTimeout(() =>{
@@ -89,40 +87,3 @@ function startOver(){
     gamePattern.length = 0;
     userClickedPattern.length = 0;
 }
-
-    // playSound(randomChosenColour);
-
-    // Testing the implementation code.
-
-    // let randomNumber = Math.floor(Math.random() * 4);
-
-    // let randomChosenColour = buttonColours[randomNumber];
-
-    // gamePattern.push(randomChosenColour);
-
-    // $("#" + randomChosenColour).fadeOut(75).fadeIn(75);
-
-    // let audio = new Audio(`./sounds/${randomChosenColour}.mp3`);
-
-    // audio.play();
-
-    // $(".btn").click(function(){
-        // console.log(this.id);
-
-        // userClickedPattern.push(this.id);
-        // console.log(userClickedPattern);
-    // });
-
-    // function playSound(name){
-
-    // }
-
-    // console.log(gamePattern[0]);
-
-    // let colorTest = 
-    // $(".btn").click(function(){
-    //     userClickedPattern.push(this.id);
-    //     console.log(userClickedPattern);
-    // });
-
-    // console.log(colorTest);
