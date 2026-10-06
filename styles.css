@@ -1,7 +1,9 @@
+/* Apply border-box sizing to all elements. */
 * {
   box-sizing: border-box;
 }
 
+/* Base page styling. */
 body {
   text-align: center;
   background-color: #011F3F;
@@ -11,6 +13,7 @@ body {
   min-height: 100vh;
 }
 
+/* Game title and level display. */
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: clamp(1.25rem, 5vw, 3rem);
@@ -19,6 +22,7 @@ body {
   word-wrap: break-word;
 }
 
+/* Centers and constrains the game board. */
 .container {
   display: flex;
   flex-direction: column;
@@ -29,12 +33,14 @@ body {
   padding: 0 10px;
 }
 
+/* Arrange the game buttons horizontally. */
 .row {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
+/* Common styling shared by all Simon buttons. */
 .btn {
   margin: clamp(8px, 3vw, 25px);
   flex: 0 1 auto;
@@ -45,11 +51,13 @@ body {
   cursor: pointer;
 }
 
+/* Visual feedback shown when the game is over. */
 .game-over {
   background-color: red;
   opacity: 0.8;
 }
 
+/* Simon button colors */
 .red {
   background-color: red;
 }
@@ -66,12 +74,13 @@ body {
   background-color: yellow;
 }
 
+/* Visual feedback when a button is pressed. */
 .pressed {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
 
-/* Tablet and below */
+/* Tablet and smaller screen adjustments */
 @media (max-width: 600px) {
   #level-title {
     font-size: clamp(1rem, 6vw, 1.75rem);
@@ -86,7 +95,7 @@ body {
   }
 }
 
-/* Very small phones */
+/* Very small phone adjustments. */
 @media (max-width: 350px) {
   .btn {
     width: clamp(60px, 30vw, 100px);
