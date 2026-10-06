@@ -9,33 +9,40 @@
 </head>
 
 <body>
+
+  <!-- Displays the current game level and start/game-over instruction. -->
   <h1 id="level-title">Press A Key to Start</h1>
+
+  <!-- Main container holding the four simon buttons. -->
   <div class="container">
+
+    <!-- First row of Simon buttons. -->
     <div class="row">
 
-      <div type="button" id="green" class="btn green">
+      <!-- Green Simon button. -->
+      <div type="button" id="green" class="btn green"></div>
 
-      </div>
-
-      <div type="button" id="red" class="btn red">
-
-      </div>
+      <!-- Red Simon button. -->
+      <div type="button" id="red" class="btn red"></div>
     </div>
 
+    <!-- Second row of Simon buttons. -->
     <div class="row">
 
-      <div type="button" id="yellow" class="btn yellow">
+      <!-- Yellow Simon button. -->
+      <div type="button" id="yellow" class="btn yellow"></div>
 
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
+      <!-- Blue Simon button. -->
+      <div type="button" id="blue" class="btn blue"></div>
 
     </div>
 
   </div>
 
+  <!-- Loads jQuery before the game's JavaScript file. -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Contains the games's logic and functionality. -->
   <script src="game.js"></script>
 </body>
 </html>
