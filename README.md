@@ -227,4 +227,3 @@ GitHub: **[ShadowMask86](https://github.com/ShadowMask86)**
 ---
 
 If you enjoyed the project, feel free to explore the repository and try the game.
-
